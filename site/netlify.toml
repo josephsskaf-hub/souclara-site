@@ -1,0 +1,10 @@
+# Configuração de deploy do site da Clara (souclara.com.br)
+# Publica a pasta raiz do repositório (onde está o index.html).
+
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
