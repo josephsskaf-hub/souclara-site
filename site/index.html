@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Clara — a recepcionista de IA que atende o WhatsApp da sua clínica 24h</title>
 <meta name="description" content="A Clara atende, responde e agenda no WhatsApp da sua clínica 24 horas por dia. Nunca mais perca um paciente sem resposta. Teste grátis por 2 semanas."/>
+<meta name="theme-color" content="#0c5a4a"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230e7c66'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Georgia'>C</text></svg>"/>
+<meta property="og:title" content="Clara — recepcionista de IA no WhatsApp da sua clínica"/>
+<meta property="og:description" content="Atende, responde e agenda 24h. Sua clínica nunca mais perde um paciente. Teste grátis por 2 semanas."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://souclara.com.br"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,7 +20,7 @@
   :root{
     --emerald:#0c5a4a; --emerald-2:#0e7c66; --green:#25d366; --green-d:#1eb257;
     --ink:#10201b; --muted:#5c6b65; --cream:#f8f6f1; --cream-2:#fffefb;
-    --line:#e7e4db; --gold:#c2a25f; --dark:#0c1714;
+    --line:#e7e4db; --gold:#c2a25f; --dark:#0c1714; --rose:#b4543f;
     --shadow-sm:0 4px 16px rgba(16,32,27,.06);
     --shadow:0 18px 50px rgba(16,32,27,.12);
     --shadow-lg:0 40px 90px rgba(12,26,21,.22);
@@ -27,12 +35,10 @@
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-2)}
   .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--gold)}
   .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15.5px;padding:15px 28px;border-radius:999px;transition:.25s;cursor:pointer;border:0}
-  .btn-primary{background:var(--green);color:#053; box-shadow:0 10px 26px rgba(37,211,102,.32)}
+  .btn-primary{background:var(--green);color:#053;box-shadow:0 10px 26px rgba(37,211,102,.32)}
   .btn-primary:hover{background:var(--green-d);color:#fff;transform:translateY(-2px);box-shadow:0 16px 34px rgba(37,211,102,.4)}
   .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
   .btn-ghost:hover{border-color:var(--emerald);color:var(--emerald)}
-  .btn-light{background:#fff;color:var(--emerald)}
-  .btn-light:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 
   /* nav */
   .nav{position:sticky;top:0;z-index:50;background:rgba(248,246,241,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(231,228,219,.7)}
@@ -48,16 +54,19 @@
   .hero::before{content:"";position:absolute;inset:0;background:
     radial-gradient(900px 480px at 78% -8%,rgba(37,211,102,.14),transparent 60%),
     radial-gradient(700px 420px at 6% 12%,rgba(12,90,74,.10),transparent 60%);pointer-events:none}
-  .hero .in{position:relative;display:grid;grid-template-columns:1.06fr .94fr;gap:54px;align-items:center;padding:78px 0 90px}
-  @media(max-width:920px){.hero .in{grid-template-columns:1fr;gap:48px;padding:54px 0 70px;text-align:center}}
+  .hero .in{position:relative;display:grid;grid-template-columns:1.06fr .94fr;gap:54px;align-items:center;padding:74px 0 88px}
+  @media(max-width:920px){.hero .in{grid-template-columns:1fr;gap:46px;padding:48px 0 64px;text-align:center}}
   .hero h1{font-size:clamp(38px,5.2vw,62px);margin:20px 0 0}
   .hero h1 em{font-style:italic;color:var(--emerald-2)}
-  .hero .lede{font-size:19px;color:var(--muted);margin:22px 0 32px;max-width:540px}
+  .hero .lede{font-size:19px;color:var(--muted);margin:22px 0 30px;max-width:540px}
   @media(max-width:920px){.hero .lede{margin-inline:auto}}
   .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
   @media(max-width:920px){.hero .cta{justify-content:center}}
-  .hero .trust{margin-top:26px;font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  @media(max-width:920px){.hero .trust{justify-content:center}}
+  .pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}
+  @media(max-width:920px){.pills{justify-content:center}}
+  .pill{font-size:12.5px;font-weight:500;color:var(--emerald);background:#eef7f3;border:1px solid #d9ebe4;padding:7px 14px;border-radius:999px}
+  .trust{margin-top:18px;font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  @media(max-width:920px){.trust{justify-content:center}}
   .stars{color:var(--gold);letter-spacing:2px}
 
   /* phone */
@@ -84,7 +93,7 @@
   .wa-input .f{flex:1;background:#fff;border-radius:20px;height:34px}
   .wa-input .s{width:34px;height:34px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:#fff}
 
-  /* marquee stats */
+  /* band */
   .band{background:var(--dark);color:#dfe9e4}
   .band .in{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:30px 0}
   @media(max-width:760px){.band .in{grid-template-columns:repeat(2,1fr);gap:24px}}
@@ -92,9 +101,8 @@
   .stat b{display:block;font-family:'Fraunces',serif;font-size:30px;color:#fff;font-weight:600}
   .stat span{font-size:12.5px;color:#9fb3ab;letter-spacing:.02em}
 
-  /* sections */
-  section{padding:96px 0}
-  .sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+  section{padding:92px 0}
+  .sec-head{max-width:680px;margin:0 auto 52px;text-align:center}
   .sec-head h2{font-size:clamp(30px,4vw,46px);margin-top:14px}
   .sec-head p{color:var(--muted);font-size:18px;margin:16px 0 0}
 
@@ -103,11 +111,22 @@
   .card{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:var(--shadow-sm);transition:.3s}
   .card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d8e6e0}
   .card .ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#e9f7f1,#d6efe5);display:grid;place-items:center;font-size:24px;margin-bottom:18px}
-  .card h3{font-size:21px}
-  .card p{color:var(--muted);font-size:15.5px;margin:9px 0 0}
+  .card h3{font-size:21px}.card p{color:var(--muted);font-size:15.5px;margin:9px 0 0}
 
-  /* steps */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+  /* comparison */
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:920px;margin:0 auto}
+  @media(max-width:760px){.vs{grid-template-columns:1fr}}
+  .vs-col{border-radius:20px;padding:32px}
+  .vs-bad{background:#fbf2ef;border:1px solid #f0d9d1}
+  .vs-good{background:linear-gradient(165deg,#0e7c66,#0c5a4a);color:#fff;box-shadow:var(--shadow)}
+  .vs-col h3{font-size:22px;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  .vs-bad h3{color:var(--rose)} .vs-good h3{color:#fff}
+  .vs-col ul{list-style:none;padding:0;margin:0;display:grid;gap:13px}
+  .vs-col li{display:flex;gap:11px;font-size:15.5px;align-items:flex-start}
+  .vs-bad li{color:#7a5448}.vs-good li{color:#dff1ea}
+  .vs-col li b{flex:0 0 auto;font-weight:700}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
   @media(max-width:880px){.steps{grid-template-columns:1fr}}
   .step{position:relative;padding-top:14px}
   .step .n{width:46px;height:46px;border-radius:50%;background:#fff;border:1.5px solid var(--line);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:20px;color:var(--emerald);font-weight:600;margin-bottom:16px}
@@ -116,7 +135,6 @@
   .step:last-child::after{display:none}
   @media(max-width:880px){.step::after{display:none}}
 
-  /* safety dark */
   .safety{background:var(--dark);color:#eaf3ef;border-radius:30px;padding:60px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;box-shadow:var(--shadow)}
   @media(max-width:760px){.safety{grid-template-columns:1fr;padding:40px;gap:22px;text-align:center}}
   .safety .shield{width:84px;height:84px;border-radius:22px;background:linear-gradient(135deg,rgba(194,162,95,.25),rgba(194,162,95,.08));display:grid;place-items:center;font-size:40px;border:1px solid rgba(194,162,95,.35)}
@@ -125,7 +143,15 @@
   .safety p{color:#aebfb8;font-size:16.5px;margin:12px 0 0;max-width:760px}
   .safety .tag{display:inline-block;margin-top:16px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(194,162,95,.4);padding:6px 13px;border-radius:999px}
 
-  /* pricing */
+  /* founder */
+  .founder{max-width:780px;margin:0 auto;text-align:center}
+  .founder .quote{font-family:'Fraunces',serif;font-size:clamp(24px,3.4vw,34px);line-height:1.3;color:var(--ink)}
+  .founder .quote span{color:var(--emerald-2)}
+  .founder .sig{margin-top:24px;display:inline-flex;align-items:center;gap:13px}
+  .founder .av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--emerald),var(--emerald-2));display:grid;place-items:center;color:#fff;font-family:'Fraunces',serif;font-weight:600}
+  .founder .who{text-align:left;font-size:14px}.founder .who b{display:block}
+  .founder .who span{color:var(--muted)}
+
   .price-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
   @media(max-width:880px){.price-wrap{grid-template-columns:1fr;gap:30px}}
   .price-copy h2{font-size:clamp(30px,4vw,44px)}
@@ -141,7 +167,6 @@
   .price-card .btn{position:relative;margin-top:26px;width:100%;justify-content:center}
   .price-card .fine{position:relative;text-align:center;font-size:12.5px;color:#bfe3d6;margin-top:14px}
 
-  /* faq */
   .faq{max-width:760px;margin:0 auto}
   .q{background:var(--cream-2);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
   .q summary{list-style:none;cursor:pointer;padding:20px 24px;font-weight:600;font-size:17px;display:flex;justify-content:space-between;align-items:center;gap:16px}
@@ -150,7 +175,6 @@
   .q[open] summary::after{transform:rotate(45deg)}
   .q p{padding:0 24px 22px;margin:0;color:var(--muted);font-size:15.5px}
 
-  /* final cta */
   .final{position:relative;text-align:center;background:radial-gradient(700px 300px at 50% 0,rgba(37,211,102,.12),transparent 65%)}
   .final h2{font-size:clamp(32px,4.6vw,52px);max-width:760px;margin:0 auto}
   .final p{color:var(--muted);font-size:18px;margin:18px auto 30px;max-width:520px}
@@ -161,13 +185,20 @@
   footer .mark{background:rgba(255,255,255,.1)}
   footer small{display:block;margin-top:6px;font-size:12.5px;color:#7d918a}
 
+  /* sticky mobile cta */
+  .mobile-cta{display:none}
+  @media(max-width:860px){
+    .mobile-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(248,246,241,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+    .mobile-cta .btn{width:100%;justify-content:center}
+    body{padding-bottom:78px}
+  }
+
   .reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .reveal.show{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <div class="nav"><div class="wrap in">
   <div class="brand"><span class="mark">C</span> Clara</div>
   <nav class="navlinks">
@@ -178,7 +209,6 @@
   <a class="btn btn-primary" href="#preco" style="padding:11px 22px;font-size:14.5px">Testar grátis</a>
 </div></div>
 
-<!-- HERO -->
 <header class="hero"><div class="wrap in">
   <div class="reveal show">
     <span class="eyebrow">Recepcionista de IA · WhatsApp</span>
@@ -188,7 +218,11 @@
       <a class="btn btn-primary" href="#preco">Testar grátis por 2 semanas</a>
       <a class="btn btn-ghost" href="#como">Ver como funciona</a>
     </div>
-    <div class="trust"><span class="stars">★★★★★</span> Feito para clínicas de estética, dermatologia e odontologia.</div>
+    <div class="pills">
+      <span class="pill">Estética</span><span class="pill">Dermatologia</span>
+      <span class="pill">Odontologia</span><span class="pill">Consultórios médicos</span>
+    </div>
+    <div class="trust"><span class="stars">★★★★★</span> Feito sob medida para clínicas brasileiras.</div>
   </div>
 
   <div class="phone-stage reveal show">
@@ -216,7 +250,6 @@
   </div>
 </div></header>
 
-<!-- STATS -->
 <div class="band"><div class="wrap in">
   <div class="stat"><b>24/7</b><span>Atendimento sem pausa</span></div>
   <div class="stat"><b>~10s</b><span>Pra responder o paciente</span></div>
@@ -224,7 +257,6 @@
   <div class="stat"><b>100%</b><span>No WhatsApp que você já usa</span></div>
 </div></div>
 
-<!-- PROBLEM -->
 <section><div class="wrap">
   <div class="sec-head reveal">
     <span class="eyebrow">O problema silencioso</span>
@@ -238,8 +270,34 @@
   </div>
 </div></section>
 
-<!-- HOW -->
-<section id="como" style="background:var(--cream-2);border-block:1px solid var(--line)"><div class="wrap">
+<section style="background:var(--cream-2);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="eyebrow">A diferença na prática</span>
+    <h2>O mesmo WhatsApp. Dois resultados.</h2>
+  </div>
+  <div class="vs">
+    <div class="vs-col vs-bad reveal">
+      <h3>😕 Sem a Clara</h3>
+      <ul>
+        <li><b>✕</b> Mensagens sem resposta à noite e no fim de semana</li>
+        <li><b>✕</b> Paciente marca na concorrência enquanto espera</li>
+        <li><b>✕</b> Recepção sobrecarregada respondendo o mesmo o dia todo</li>
+        <li><b>✕</b> Agenda com buracos e faltas que ninguém lembrou</li>
+      </ul>
+    </div>
+    <div class="vs-col vs-good reveal">
+      <h3>💚 Com a Clara</h3>
+      <ul>
+        <li><b>✓</b> Resposta na hora, 24 horas por dia</li>
+        <li><b>✓</b> Cada paciente aproveitado e já pré-agendado</li>
+        <li><b>✓</b> Recepção livre pra cuidar de quem está na clínica</li>
+        <li><b>✓</b> Lembretes que reduzem faltas e desistências</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="como"><div class="wrap">
   <div class="sec-head reveal">
     <span class="eyebrow">Simples de verdade</span>
     <h2>Você configura uma vez. A Clara cuida do resto.</h2>
@@ -252,8 +310,7 @@
   </div>
 </div></section>
 
-<!-- FEATURES -->
-<section><div class="wrap">
+<section style="background:var(--cream-2);border-block:1px solid var(--line)"><div class="wrap">
   <div class="sec-head reveal">
     <span class="eyebrow">O que a Clara faz</span>
     <h2>Uma recepcionista completa, dentro do WhatsApp.</h2>
@@ -268,7 +325,6 @@
   </div>
 </div></section>
 
-<!-- SAFETY -->
 <section id="seguranca"><div class="wrap">
   <div class="safety reveal">
     <div class="shield">🛡️</div>
@@ -280,8 +336,18 @@
   </div>
 </div></section>
 
-<!-- PRICING -->
-<section id="preco" style="background:var(--cream-2);border-block:1px solid var(--line)"><div class="wrap">
+<section style="background:var(--cream-2);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="founder reveal">
+    <span class="eyebrow" style="justify-content:center">Por que a Clara existe</span>
+    <p class="quote" style="margin-top:18px">“Eu vi clínicas perderem pacientes todos os dias — não por falta de qualidade, mas por <span>não conseguir responder a tempo</span>. A Clara existe pra que nenhuma clínica perca um paciente por falta de atenção.”</p>
+    <div class="sig">
+      <div class="av">J</div>
+      <div class="who"><b>Joseph</b><span>Fundador da Clara</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="preco"><div class="wrap">
   <div class="price-wrap">
     <div class="price-copy reveal">
       <span class="eyebrow">Comece sem risco</span>
@@ -291,7 +357,7 @@
         <li><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25d366"/><path d="M7 12.4l3.2 3.1L17 8.6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Configuração feita pra você, sem trabalho.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25d366"/><path d="M7 12.4l3.2 3.1L17 8.6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Atendimento 24h no seu próprio WhatsApp.</li>
         <li><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25d366"/><path d="M7 12.4l3.2 3.1L17 8.6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Pré-agendamento automático e organizado.</li>
-        <li><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25d366"/><path d="M7 12.4l3.2 3.1L17 8.6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Suporte direto e próximo.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25d366"/><path d="M7 12.4l3.2 3.1L17 8.6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Sem fidelidade. Cancela quando quiser.</li>
       </ul>
     </div>
     <div class="price-card reveal">
@@ -304,8 +370,7 @@
   </div>
 </div></section>
 
-<!-- FAQ -->
-<section><div class="wrap">
+<section style="background:var(--cream-2);border-block:1px solid var(--line)"><div class="wrap">
   <div class="sec-head reveal">
     <span class="eyebrow">Perguntas frequentes</span>
     <h2>Tudo que você quer saber.</h2>
@@ -319,7 +384,6 @@
   </div>
 </div></section>
 
-<!-- FINAL CTA -->
 <section class="final"><div class="wrap">
   <h2 class="reveal">Sua clínica nunca mais perde um paciente no WhatsApp.</h2>
   <p class="reveal">Comece grátis hoje. Veja a Clara trabalhando pela sua clínica — antes de pagar nada.</p>
@@ -334,16 +398,16 @@
   <small>Atendimento humano e profissional,<br>com a tecnologia trabalhando por você.</small>
 </div></footer>
 
+<div class="mobile-cta"><a class="btn btn-primary" href="#preco">Testar grátis por 2 semanas</a></div>
+
 <script>
   // WhatsApp link — troque pelo número oficial quando estiver online.
-  // Ex.: https://wa.me/5511999999999?text=Quero%20testar%20a%20Clara
   var WHATSAPP = "https://wa.me/?text=Quero%20testar%20a%20Clara%20na%20minha%20cl%C3%ADnica";
   ["waBtn","waBtn2"].forEach(function(id){var e=document.getElementById(id);if(e)e.href=WHATSAPP;});
 
-  // Scroll reveal
   var io = new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
-  },{threshold:.14});
+  },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 </script>
 </body>
